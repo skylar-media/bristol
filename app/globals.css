@@ -4,6 +4,8 @@
   --color-main: #0064AD;
   --color-red: #EB312F;
   --color-yellow: #FFC107;
+  --color-green: #689F38;
+  --color-grey: #F6F7F9;
 }
 
 body {
@@ -13,18 +15,25 @@ body {
   font-weight: 400;
 }
 
+@media (min-width: 96rem) {
+  .container {
+    max-width: 90rem;
+  }
+}
+
+
 .container {
   margin: auto;
   width: 90%;
 }
 
 section {
-  padding-block: 40px;
+  padding-block: 60px;
 }
 
 @media (max-width: 992px) {
   section {
-    padding-block: 30px;
+    padding-block: 40px;
   }
 }
 
@@ -34,6 +43,6 @@ section {
   }
 
   section {
-    padding-block: 20px;
+    padding-block: 30px;
   }
 }
