@@ -15,16 +15,18 @@ type FormData = {
 const QuoteForm = ({
   buttonId,
   formId,
+  location,
 }: {
   buttonId: string;
   formId: string;
+  location: string;
 }) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
     vehicle: "",
-    location: "Brampton Car and Truck Rental",
+    location: location,
   });
 
   const [loading, setLoading] = useState(false);

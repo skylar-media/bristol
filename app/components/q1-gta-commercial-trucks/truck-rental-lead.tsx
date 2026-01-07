@@ -1,7 +1,7 @@
 import { industries } from "@/lib/data/industries";
 import QuoteForm from "./contact-form";
 
-const TruckRentalLead = () => {
+const TruckRentalLead = ({ location }: { location: string }) => {
   return (
     <section className="bg-white container">
       <div>
@@ -19,7 +19,11 @@ const TruckRentalLead = () => {
               Tell us how to reach you:
             </p>
 
-            <QuoteForm buttonId="truck-lead-btn" formId="truck-lead" />
+            <QuoteForm
+              buttonId="frm-bristol-lp-top-submit"
+              formId="truck-lead"
+              location={location}
+            />
           </div>
 
           <aside className="lg:col-span-5">

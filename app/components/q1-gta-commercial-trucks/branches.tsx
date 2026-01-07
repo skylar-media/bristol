@@ -25,6 +25,7 @@ const Branches = () => {
               </div>
               <Link
                 href={`tel:${location.phoneHref}`}
+                id={location.id}
                 className="inline-flex items-center text-base gap-2 rounded-xl bg-yellow px-5 py-2 font-semibold w-fit"
               >
                 <Phone />

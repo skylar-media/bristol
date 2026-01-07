@@ -1,8 +1,13 @@
+import { BristolLocationType } from "@/lib/data/locations";
 import Image from "next/image";
 import Link from "next/link";
 import Phone from "../svg/phone";
 
-const Header = () => {
+const Header = ({
+  currentLocation,
+}: {
+  currentLocation: BristolLocationType;
+}) => {
   return (
     <div className="bg-white sticky top-0 z-50">
       <div className="w-full max-w-[90%] mx-auto">
@@ -14,6 +19,7 @@ const Header = () => {
             height={100}
             unoptimized
             className="w-40 h-full object-cover"
+            id="logo-bristol-lp-header"
           />
           <div className="flex items-center gap-10">
             <p className="font-bold text-main tracking-wide lg:block hidden">
@@ -21,11 +27,12 @@ const Header = () => {
             </p>
 
             <Link
-              href="tel:9058238499"
+              href={currentLocation.ringsToPhoneTel}
+              id="btn-bristol-lp-header-call"
               className="inline-flex items-center text-base gap-2 rounded-xl bg-yellow px-5 py-2 font-semibold"
             >
               <Phone />
-              <span>(905) 823-8499</span>
+              <span>{currentLocation.displayPhone}</span>
             </Link>
           </div>
         </header>

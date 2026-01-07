@@ -12,6 +12,7 @@ export const vehicleCards = [
       "Licence: G Class",
     ],
     ctaText: "Get Quote",
+    btnId: "btn-bristol-lp-carousel-cargo-get-quote",
   },
   {
     id: "16-cube-truck",
@@ -26,6 +27,7 @@ export const vehicleCards = [
       "Licence: G Class",
     ],
     ctaText: "Get Quote",
+    btnId: "btn-bristol-lp-carousel-16ft-cube-get-quote",
   },
   {
     id: "20-straight-truck",
@@ -40,6 +42,7 @@ export const vehicleCards = [
       "Licence: G Class",
     ],
     ctaText: "Get Quote",
+    btnId: "btn-bristol-lp-carousel-20ft-straight-get-quote",
   },
   {
     id: "24-straight-truck",
@@ -54,5 +57,6 @@ export const vehicleCards = [
       "Licence: G Class",
     ],
     ctaText: "Get Quote",
+    btnId: "btn-bristol-lp-carousel-24to26ft-straight-get-quote",
   },
 ];

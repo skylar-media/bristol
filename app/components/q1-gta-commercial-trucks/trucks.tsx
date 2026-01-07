@@ -74,6 +74,7 @@ const Trucks = () => {
                     <button
                       className="mt-auto w-full rounded-xl bg-red px-6 py-4 text-lg font-semibold text-white transition hover:bg-red-600"
                       onClick={() => populateTruck(vehicle.title)}
+                      id={vehicle.btnId}
                     >
                       {vehicle.ctaText}
                     </button>
