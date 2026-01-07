@@ -1,6 +1,7 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import Header from "./components/q1-gta-commercial-trucks/header";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -22,7 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-MPBJHG3F" />
-      <body className={`${figtree.variable} antialiased`}>{children}</body>
+      <body
+        className={`${figtree.variable} flex min-h-screen flex-col antialiased`}
+      >
+        <Header />
+        <main className="flex-1">{children}</main>
+      </body>
     </html>
   );
 }
