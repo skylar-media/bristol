@@ -1,6 +1,7 @@
 import { BristolLocationType } from "@/lib/data/locations";
 import Image from "next/image";
 import Link from "next/link";
+import CanadaFlag from "../svg/canana-flag";
 import Phone from "../svg/phone";
 
 const Header = ({
@@ -34,6 +35,7 @@ const Header = ({
               <Phone />
               <span>{currentLocation.displayPhone}</span>
             </Link>
+            <CanadaFlag />
           </div>
         </header>
         <p className="font-bold mb-5 text-center text-main text-base tracking-wide lg:hidden block">

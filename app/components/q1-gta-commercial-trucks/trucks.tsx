@@ -34,6 +34,10 @@ const Trucks = () => {
       select.value = vehicleTitle;
       select.dispatchEvent(new Event("change", { bubbles: true }));
     });
+
+    document
+      .getElementById("contact-form")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   const sortedVehicles = [...vehicleCards].sort((a, b) => a.order - b.order);

@@ -74,24 +74,20 @@ export const formFields: FormField[] = [
     options: [
       {
         label: "Mississauga Car and Truck Rental",
-        value: "Mississauga Car and Truck Rental",
+        value: "Mississauga",
       },
       {
         label: "Milton Car and Truck Rental",
-        value: "Milton Car and Truck Rental",
+        value: "Milton",
       },
       {
-        label: "Brampton Car and Truck Rental",
-        value: "Brampton Car and Truck Rental",
-      },
-      {
-        label: "Brampton Truck Rental (Bramalea)",
-        value: "Brampton Truck Rental (Bramalea)",
-      },
-      {
-        label: "Other/GTA",
-        value: "Other/GTA",
+        label: "Brampton Truck Rental (Rutherford Road)",
+        value: "GTA",
         selected: true,
+      },
+      {
+        label: "Brampton Car and Truck Rental (Bramalea)",
+        value: "Brampton",
       },
     ],
     id: "location",

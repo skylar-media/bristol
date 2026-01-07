@@ -30,24 +30,9 @@ export const vehicleCards = [
     btnId: "btn-bristol-lp-carousel-16ft-cube-get-quote",
   },
   {
-    id: "20-straight-truck",
-    title: "20' Straight Trucks",
-    order: 3,
-    image: "/trucks/20_straight_truck.png",
-    description:
-      "Heavy-duty logistics. Hydraulic liftgate for pallets, skids, and equipment.",
-    features: [
-      "Feature: Hydraulic Liftgate",
-      "Capacity: 8-10 Pallets",
-      "Licence: G Class",
-    ],
-    ctaText: "Get Quote",
-    btnId: "btn-bristol-lp-carousel-20ft-straight-get-quote",
-  },
-  {
     id: "24-straight-truck",
     title: "24'-26' Straight Trucks",
-    order: 4,
+    order: 3,
     image: "/trucks/24_straight_truck.png",
     description:
       "Heavy-duty logistics. Hydraulic liftgate for pallets, skids, and equipment.",
@@ -58,5 +43,20 @@ export const vehicleCards = [
     ],
     ctaText: "Get Quote",
     btnId: "btn-bristol-lp-carousel-24to26ft-straight-get-quote",
+  },
+  {
+    id: "20-straight-truck",
+    title: "20' Straight Trucks",
+    order: 4,
+    image: "/trucks/20_straight_truck.png",
+    description:
+      "Heavy-duty logistics. Hydraulic liftgate for pallets, skids, and equipment.",
+    features: [
+      "Feature: Hydraulic Liftgate",
+      "Capacity: 8-10 Pallets",
+      "Licence: G Class",
+    ],
+    ctaText: "Get Quote",
+    btnId: "btn-bristol-lp-carousel-20ft-straight-get-quote",
   },
 ];

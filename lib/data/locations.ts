@@ -33,7 +33,7 @@ export const bristolLocations = [
   },
   {
     id: "brampton-rutherford",
-    name: "Brampton (Rutherford Rd)",
+    name: "GTA",
     displayPhone: "(647) 584-9852",
     ringsToPhone: "(905) 453-8080",
     ringsToPhoneTel: "tel:9054538080",
