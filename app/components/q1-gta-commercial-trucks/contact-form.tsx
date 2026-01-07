@@ -50,24 +50,17 @@ const QuoteForm = ({
     setLoading(true);
 
     try {
-      // 🔹 Replace with your API call
-      console.log("Form submitted:", formData);
-
-      /*
-      await fetch("/api/quote", {
+      await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      */
-
-      alert("Quote request submitted!");
       setFormData({
         name: "",
         email: "",
         phone: "",
         vehicle: "",
-        location: "Mississauga Car and Truck Rental",
+        location: location,
       });
     } catch (error) {
       console.error(error);
