@@ -8,11 +8,11 @@ const TruckRentalLead = () => {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
           {/* LEFT: Form */}
           <div className="lg:col-span-7 flex flex-col gap-2 md:gap-5">
-            <h2 className="text-main font-bold text-2xl md:text-5xl text-balance">
+            <h2 className="text-main text-center md:text-left font-bold text-2xl md:text-5xl text-balance">
               Let&apos;s Talk Truck Rentals
             </h2>
 
-            <p className="max-w-2xl ">
+            <p className="max-w-2xl text-center md:text-left">
               We&apos;ll confirm vehicle availability, prepare your quote, and
               apply your <strong>$50*</strong> discount.
               <br />
@@ -31,7 +31,7 @@ const TruckRentalLead = () => {
               {industries.map((industry) => (
                 <span
                   key={industry}
-                  className="rounded-full bg-[#E4F4FF] px-5 py-2 font-bold text-main"
+                  className="rounded-full bg-[#E4F4FF] px-3 md:px-5 py-2 font-bold text-main"
                 >
                   {industry}
                 </span>

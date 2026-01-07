@@ -59,7 +59,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className={`embla__button embla__button--prev flex h-12 w-12 cursor-pointer items-center justify-center rounded-full p-2 hover:border-1 focus:border-1 md:h-15 md:w-15`}
+      className={`embla__button embla__button--prev flex h-12 w-12 cursor-pointer items-center justify-center rounded-full p-2 hover:border focus:border md:h-15 md:w-15`}
       type="button"
       style={{
         borderColor: color,
@@ -76,7 +76,7 @@ export const NextButton: React.FC<PropType> = (props) => {
 
   return (
     <button
-      className={`embla__button embla__button--next flex h-12 w-12 cursor-pointer items-center justify-center rounded-full p-2 hover:border-1 focus:border-1 md:h-15 md:w-15`}
+      className={`embla__button embla__button--next flex h-12 w-12 cursor-pointer items-center justify-center rounded-full p-2 hover:border focus:border md:h-15 md:w-15`}
       type="button"
       style={{
         borderColor: color,

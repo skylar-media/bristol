@@ -1,7 +1,6 @@
 "use client";
 
 import { vehicleCards } from "@/lib/data/trucks";
-import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import {
@@ -10,10 +9,10 @@ import {
   usePrevNextButtons,
 } from "./embla/EmblaCarouselArrowButtons";
 
-export const OPTIONS: EmblaOptionsType = { loop: true };
+useEmblaCarousel.globalOptions = { loop: true };
 
 const Trucks = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
 
   const {
     prevBtnDisabled,
