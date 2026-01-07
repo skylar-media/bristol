@@ -4,7 +4,7 @@ export const bristolLocations = [
     name: "Mississauga",
     displayPhone: "(647) 931-1763",
     ringsToPhone: "(905) 823-8499",
-    email: "nbramble@bristoltruckrentals.com",
+    email: "alexp@bristoltruckrentals.com",
     title: "Mississauga Car and Truck Rental",
   },
   {
@@ -22,6 +22,7 @@ export const bristolLocations = [
     ringsToPhone: "(905) 453-8080",
     email: "tgonzaga@bristoltruckrentals.com",
     title: "Brampton Car and Truck Rental",
+    fallback: true,
   },
   {
     title: "Brampton Truck Rental (Bramalea)",
@@ -29,15 +30,6 @@ export const bristolLocations = [
     name: "Brampton (Bramalea)",
     displayPhone: "(647) 362-1965",
     ringsToPhone: "(905) 790-8086",
-    email: "cmedeiros@bristoltruckrentals.com",
-  },
-  {
-    id: "gta",
-    name: "GTA (Fallback)",
-    displayPhone: "(647) 692-6388",
-    ringsToPhone: "(905) 453-8080",
-    email: "tgonzaga@bristoltruckrentals.com",
-    fallback: true,
-    title: "GTA",
+    email: "dlobo@bristoltruckrentals.com",
   },
 ];

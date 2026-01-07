@@ -4,8 +4,9 @@ import GtaTradesTrust from "../components/q1-gta-commercial-trucks/gta-trades-tr
 import Hero from "../components/q1-gta-commercial-trucks/hero";
 import Testimonials from "../components/q1-gta-commercial-trucks/testimonials";
 import TruckRentalLead from "../components/q1-gta-commercial-trucks/truck-rental-lead";
+import Trucks from "../components/q1-gta-commercial-trucks/trucks";
 
-const page = () => {
+const page = async () => {
   return (
     <div className="">
       <Hero />
@@ -18,6 +19,7 @@ const page = () => {
           Bristol commercial vans and trucks.
         </p>
       </section>
+      <Trucks />
       <TruckRentalLead />
       <GtaTradesTrust />
       <Testimonials />
@@ -36,7 +38,7 @@ const page = () => {
           </p>
           <p>Tell us how to reach you:</p>
         </div>
-        <QuoteForm buttonId="contact-form" />
+        <QuoteForm buttonId="contact-form-btn" formId="contact-form" />
         <p className="font-bold text-center mt-4 max-w-3xl">
           *Offer applies to a single vehicle rental booked by March, 31 2026.
           $50 discount applies to qualifying bookings as specified in the

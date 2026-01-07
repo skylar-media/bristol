@@ -12,13 +12,19 @@ type FormData = {
   location: string;
 };
 
-const QuoteForm = ({ buttonId }: { buttonId: string }) => {
+const QuoteForm = ({
+  buttonId,
+  formId,
+}: {
+  buttonId: string;
+  formId: string;
+}) => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
     vehicle: "",
-    location: "GTA",
+    location: "Brampton Car and Truck Rental",
   });
 
   const [loading, setLoading] = useState(false);
@@ -73,6 +79,7 @@ const QuoteForm = ({ buttonId }: { buttonId: string }) => {
     <form
       onSubmit={handleSubmit}
       className="w-full max-w-3xl bg-white rounded-2xl space-y-6"
+      id={formId}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {formFields.map((field: FormField) => (

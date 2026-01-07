@@ -19,7 +19,7 @@ const TruckRentalLead = () => {
               Tell us how to reach you:
             </p>
 
-            <QuoteForm buttonId="truck-lead-btn" />
+            <QuoteForm buttonId="truck-lead-btn" formId="truck-lead" />
           </div>
 
           <aside className="lg:col-span-5">

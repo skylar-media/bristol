@@ -30,12 +30,9 @@ section {
   padding-block: 60px;
 }
 
-
-@media (min-width: 1300px) {
-  .hero-content {
-    top: 60px;
-    left: 20px;
-  }
+.hero-content {
+  top: 40px;
+  left: 20px;
 }
 
 @media (min-width: 1600px) {
@@ -47,15 +44,15 @@ section {
 
 @media (min-width: 1800px) {
   .hero-content {
-    top: 140px;
-    left: 100px;
+    top: 120px;
+    left: 60px;
   }
 }
 
 @media (min-width: 2000px) {
   .hero-content {
-    top: 160px;
-    left: 120px;
+    top: 140px;
+    left: 70px;
   }
 }
 
@@ -69,12 +66,9 @@ section {
 @media (min-width: 2500px) {
   .hero-content {
     top: 220px;
-    left: 250px;
+    left: 160px;
   }
 }
-
-
-
 
 @media (max-width: 992px) {
   section {
@@ -89,5 +83,86 @@ section {
 
   section {
     padding-block: 30px;
+  }
+}
+
+/*** Carousel ***/
+
+
+.embla {
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+  --slide-spacing-sm: 1.6rem;
+  --slide-size-sm: 50%;
+  --slide-spacing-lg: 2rem;
+  --slide-size-lg: calc(100% / 3);
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+@media (min-width: 750px) {
+  .embla__container {
+    margin-left: calc(var(--slide-spacing-sm) * -1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .embla__container {
+    margin-left: calc(var(--slide-spacing-lg) * -1);
+  }
+}
+
+.embla__slide {
+  min-width: 0;
+  flex: 0 0 var(--slide-size);
+  padding-left: var(--slide-spacing);
+}
+
+.embla__slide__number {
+  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
+  border-radius: 1.8rem;
+  font-size: 4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--slide-height);
+  user-select: none;
+}
+
+.embla__controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+
+@media (min-width: 750px) {
+  .embla__slide {
+    flex: 0 0 var(--slide-size-sm);
+    padding-left: var(--slide-spacing-sm);
+  }
+}
+
+@media (min-width: 1200px) {
+  .embla__slide {
+    flex: 0 0 var(--slide-size-lg);
+    padding-left: var(--slide-spacing-lg);
   }
 }

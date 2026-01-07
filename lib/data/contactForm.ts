@@ -59,8 +59,9 @@ export const formFields: FormField[] = [
     options: [
       { label: "Select a Vehicle", value: "" },
       { label: "Cargo Van", value: "Cargo Van" },
-      { label: "Cube Truck", value: "Cube Truck" },
-      { label: "Pickup Truck", value: "Pickup Truck" },
+      { label: "16' Cube Truck", value: "16' Cube Truck" },
+      { label: "24'-26' Straight Trucks", value: "24'-26' Straight Trucks" },
+      { label: "20' Straight Trucks", value: "20' Straight Trucks" },
     ],
     id: "vehicle",
   },
