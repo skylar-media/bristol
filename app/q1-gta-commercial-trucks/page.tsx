@@ -6,7 +6,7 @@ import Testimonials from "../components/q1-gta-commercial-trucks/testimonials";
 import TruckRentalLead from "../components/q1-gta-commercial-trucks/truck-rental-lead";
 import Trucks from "../components/q1-gta-commercial-trucks/trucks";
 
-const page = async () => {
+const page = () => {
   return (
     <div className="">
       <Hero />

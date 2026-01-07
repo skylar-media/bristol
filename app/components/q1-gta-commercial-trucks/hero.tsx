@@ -1,13 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 
 const Hero = () => {
-  const searchParams = useSearchParams();
-
-  const location = searchParams.get("location");
-  console.log(location);
   return (
     <div className="relative overflow-hidden">
       <picture>
