@@ -1,6 +1,7 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
+import Footer from "./components/q1-gta-commercial-trucks/footer";
 import Header from "./components/q1-gta-commercial-trucks/header";
 import "./globals.css";
 
@@ -28,6 +29,7 @@ export default function RootLayout({
       >
         <Header />
         <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

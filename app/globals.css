@@ -21,7 +21,6 @@ body {
   }
 }
 
-
 .container {
   margin: auto;
   width: 90%;
@@ -30,6 +29,52 @@ body {
 section {
   padding-block: 60px;
 }
+
+
+@media (min-width: 1300px) {
+  .hero-content {
+    top: 60px;
+    left: 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .hero-content {
+    top: 110px;
+    left: 60px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .hero-content {
+    top: 140px;
+    left: 100px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .hero-content {
+    top: 160px;
+    left: 120px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .hero-content {
+    top: 180px;
+    left: 160px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .hero-content {
+    top: 220px;
+    left: 250px;
+  }
+}
+
+
+
 
 @media (max-width: 992px) {
   section {

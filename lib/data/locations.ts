@@ -1,0 +1,43 @@
+export const bristolLocations = [
+  {
+    id: "mississauga",
+    name: "Mississauga",
+    displayPhone: "(647) 931-1763",
+    ringsToPhone: "(905) 823-8499",
+    email: "nbramble@bristoltruckrentals.com",
+    title: "Mississauga Car and Truck Rental",
+  },
+  {
+    id: "milton",
+    name: "Milton",
+    displayPhone: "(647) 693-2452",
+    ringsToPhone: "(905) 864-9880",
+    email: "valimena@bristoltruckrentals.com",
+    title: "Milton Car and Truck Rental",
+  },
+  {
+    id: "brampton-rutherford",
+    name: "Brampton (Rutherford Rd)",
+    displayPhone: "(647) 584-9852",
+    ringsToPhone: "(905) 453-8080",
+    email: "tgonzaga@bristoltruckrentals.com",
+    title: "Brampton Car and Truck Rental",
+  },
+  {
+    title: "Brampton Truck Rental (Bramalea)",
+    id: "brampton-bramalea",
+    name: "Brampton (Bramalea)",
+    displayPhone: "(647) 362-1965",
+    ringsToPhone: "(905) 790-8086",
+    email: "cmedeiros@bristoltruckrentals.com",
+  },
+  {
+    id: "gta",
+    name: "GTA (Fallback)",
+    displayPhone: "(647) 692-6388",
+    ringsToPhone: "(905) 453-8080",
+    email: "tgonzaga@bristoltruckrentals.com",
+    fallback: true,
+    title: "GTA",
+  },
+];
