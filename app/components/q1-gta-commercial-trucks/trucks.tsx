@@ -36,12 +36,14 @@ const Trucks = () => {
       select.dispatchEvent(new Event("change", { bubbles: true }));
     });
   };
+
+  const sortedVehicles = [...vehicleCards].sort((a, b) => a.order - b.order);
   return (
     <section className="bg-main">
       <div className="embla mt-12 container mb-12 md:mt-20 md:mb-0">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">
-            {vehicleCards.map((vehicle) => {
+            {sortedVehicles.map((vehicle) => {
               return (
                 <div className="embla__slide" key={vehicle.id}>
                   <div className=" flex h-full flex-col rounded-3xl bg-white p-8 shadow-sm">

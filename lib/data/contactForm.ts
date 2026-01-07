@@ -89,8 +89,8 @@ export const formFields: FormField[] = [
         value: "Brampton Truck Rental (Bramalea)",
       },
       {
-        label: "GTA",
-        value: "GTA",
+        label: "Other/GTA",
+        value: "Other/GTA",
         selected: true,
       },
     ],

@@ -32,7 +32,7 @@ const Hero = () => {
         <p className=" md:max-w-[60%] w-full">
           When you book with Bristol, your reservation is guaranteed.
         </p>
-        <div className="flex items-center gap-4 xl:mt-6 mb-1">
+        <div className="items-center gap-4 xl:mt-6 mb-1 hidden md:flex">
           <Link href="#contact-us" className="bg-red px-5 py-2 rounded-xl">
             Get Quote & Save $50
           </Link>
@@ -46,7 +46,7 @@ const Hero = () => {
         <p className="text-balance hidden xl:block">
           Canadian Owned • Pre-Cleaned Vehicles • Fast Pick-Up
         </p>
-        <ul className="text-balance block xl:hidden">
+        <ul className="text-balance hidden md:block xl:hidden">
           <li>Canadian Owned • Pre-Cleaned Vehicles</li>
           <li>Fast Pick-Up</li>
         </ul>

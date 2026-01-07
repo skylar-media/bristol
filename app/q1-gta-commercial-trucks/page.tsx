@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Branches from "../components/q1-gta-commercial-trucks/branches";
 import QuoteForm from "../components/q1-gta-commercial-trucks/contact-form";
 import GtaTradesTrust from "../components/q1-gta-commercial-trucks/gta-trades-trust";
@@ -10,6 +11,20 @@ const page = () => {
   return (
     <div className="">
       <Hero />
+      <div className="items-center justify-center mt-4 gap-4 xl:mt-6 mb-1 md:hidden flex text-white font-bold">
+        <Link href="#contact-us" className="bg-red px-5 py-2 rounded-xl">
+          Get Quote & Save $50
+        </Link>
+        <Link
+          href="tel:9058238499"
+          className="bg-yellow text-black px-5 py-2 rounded-xl"
+        >
+          Call Now
+        </Link>
+      </div>
+      <p className="text-balance text-center mt-4 text-sm text-main font-bold md:hidden block">
+        Canadian Owned • Pre-Cleaned Vehicles • Fast Pick-Up
+      </p>
       <section className="flex flex-col items-center text-center gap-2 md:gap-5 w-full container">
         <h2 className="text-main font-bold text-2xl md:text-5xl text-balance">
           A Truck for Every Job, Delivery, and Trade
@@ -43,7 +58,8 @@ const page = () => {
           *Offer applies to a single vehicle rental booked by March, 31 2026.
           $50 discount applies to qualifying bookings as specified in the
           promotion details. Eligible vehicles include Cargo Vans, 16&apos; Cube
-          Trucks, and 20&apos;-26&apos; / 5-Ton Trucks.
+          Trucks, and 20&apos;-26&apos; / 5-Ton trucks. Bristol car and truck
+          rental locations include Brampton, Mississauga and Milton exclusively.
         </p>
       </section>
     </div>
