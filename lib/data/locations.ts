@@ -43,13 +43,13 @@ export const bristolLocations = [
     label: "GTA",
   },
   {
-    id: "brampton-bramalea",
-    name: "Brampton (Bramalea)",
+    id: "brampton",
+    name: "Brampton",
     displayPhone: "(647) 362-1965",
     ringsToPhone: "(905) 790-8086",
     ringsToPhoneTel: "tel:9057908086",
     email: "dlobo@bristoltruckrentals.com",
-    title: "Brampton Truck Rental (Bramalea)",
+    title: "Brampton Truck Rental",
     label: "Brampton",
   },
 ];

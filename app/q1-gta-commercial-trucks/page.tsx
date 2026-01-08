@@ -49,8 +49,8 @@ const page = async ({
             A Truck for Every Job, Delivery, and Trade
           </h2>
           <p className="font-bold md:max-w-xl">
-            Cleaned and maintained for reliability, Mississauga trades choose
-            Bristol commercial vans and trucks.
+            Cleaned and maintained for reliability, {locationData.name} trades
+            choose Bristol commercial vans and trucks.
           </p>
         </section>
         <Trucks />

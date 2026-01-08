@@ -21,12 +21,13 @@ const QuoteForm = ({
   formId: string;
   location: string;
 }) => {
+  console.log(location);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
     vehicle: "",
-    location: location,
+    location: location.toLowerCase(),
   });
 
   const [loading, setLoading] = useState(false);
@@ -60,7 +61,7 @@ const QuoteForm = ({
         email: "",
         phone: "",
         vehicle: "",
-        location: location,
+        location: "gta",
       });
     } catch (error) {
       console.error(error);

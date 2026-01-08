@@ -24,7 +24,10 @@ const Hero = ({
       </picture>
       <div className="absolute hero-content xl:p-5 font-bold text-white md:max-w-140 flex flex-col gap-5">
         <h1 className="text-2xl md:text-3xl xl:text-5xl text-balance">
-          Commercial Van and Truck Rentals in {currentLocation.label}
+          Commercial Van and Truck Rentals in{" "}
+          {currentLocation.label.toLowerCase() === "gta"
+            ? "the GTA"
+            : currentLocation.label}
         </h1>
         <p className=" md:max-w-[60%] w-full text-balance xl:text-nowrap">
           When you book with Bristol, your reservation is guaranteed.
