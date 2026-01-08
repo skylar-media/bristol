@@ -65,7 +65,6 @@ const QuoteForm = ({
       });
     } catch (error) {
       console.error(error);
-      alert("Something went wrong");
     } finally {
       setLoading(false);
     }

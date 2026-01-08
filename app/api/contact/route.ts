@@ -27,9 +27,12 @@ export const bristolLocations = [
     label: "Brampton Car and Truck Rental (Bramalea)",
     value: "brampton bramaliea",
     email: "dlobo@bristoltruckrentals.com",
-    cc: "jhussain@bristoltruckrentlals.com,mmoras@bristoltruckrentals.com",
+    cc: "jhussain@bristoltruckrentals.com,mmoras@bristoltruckrentals.com",
   },
 ];
+
+const normalizeEmails = (emails?: string) =>
+  emails ? emails.split(",").map((e) => e.trim()) : [];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const buildEmailContent = (body: any, email: string, cc: string) => {
@@ -84,18 +87,13 @@ export async function POST(req: NextRequest) {
       locationData.cc
     );
     const message = {
-      to: [
-        "karanm@skylarmedia.ca",
-        "agim@skylarmedia.ca",
-        "kajals@skylarmedia.ca",
-      ],
-      //   cc: locationData.cc.split(","),
-      cc: "kajals@skylarmedia.ca",
+      to: ["karanm@skylarmedia.ca", "agim@skylarmedia.ca"],
+      cc: ["kajals@skylarmedia.ca"],
       from: {
         email: "websupport@skylarmedia.ca",
         name: "Bristol Truck Rentals",
       },
-      replyTo: body.email,
+      replyTo: body.email || "websupport@skylarmedia.ca",
       subject: `SAVE50 Contact ${body.name} - B2B Rental Inquiry`,
       text: htmlContent.replace(/<[^>]+>/g, ""),
       html: htmlContent,
