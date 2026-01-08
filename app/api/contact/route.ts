@@ -84,7 +84,11 @@ export async function POST(req: NextRequest) {
       locationData.cc
     );
     const message = {
-      to: ["karanm@skylarmedia.ca", "agim@skylarmedia.ca"],
+      to: [
+        "karanm@skylarmedia.ca",
+        "agim@skylarmedia.ca",
+        "kajals@skylarmedia.ca",
+      ],
       //   cc: locationData.cc.split(","),
       cc: "kajals@skylarmedia.ca",
       from: {
