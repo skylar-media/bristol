@@ -75,7 +75,7 @@ export async function POST(req: NextRequest) {
 
     const htmlContent = buildEmailContent(body, locationData.email);
     const message = {
-      to: "karanm@skylarmedia.ca",
+      to: ["karanm@skylarmedia.ca", "agim@skylarmedia.ca"],
       from: {
         email: "websupport@skylarmedia.ca",
         name: "Bristol Truck Rentals",
