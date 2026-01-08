@@ -185,3 +185,10 @@ section {
     padding-left: var(--slide-spacing-lg);
   }
 }
+
+@media (max-width: 1250px) and (min-width: 1050px) {
+  .hero-heading {
+    max-width: 450px;
+    width: 100%;
+  }
+}

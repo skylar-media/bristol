@@ -8,29 +8,33 @@ export const bristolLocations = [
     label: "Mississauga Car and Truck Rental",
     value: "mississauga",
     email: "alexp@bristoltruckrentals.com",
+    cc: "pshilotri@bristoltruckrentals.com",
   },
   {
     label: "Milton Car and Truck Rental",
     value: "milton",
     email: "valimena@bristoltruckrentals.com",
+    cc: "tsabri@bristoltruckrentals.com",
   },
   {
     label: "Brampton Truck Rental (Rutherford Road)",
     value: "brampton",
     email: "tgonzaga@bristoltruckrentals.com",
+    cc: "vshory@bristoltruckrentals.com",
     fallback: true, // ✅ default GTA / Brampton
   },
   {
     label: "Brampton Car and Truck Rental (Bramalea)",
     value: "brampton bramaliea",
     email: "dlobo@bristoltruckrentals.com",
+    cc: "jhussain@bristoltruckrentlals.com,mmoras@bristoltruckrentals.com",
   },
 ];
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const buildEmailContent = (body: any, email: string) => {
+const buildEmailContent = (body: any, email: string, cc: string) => {
   return `
-    <p>Hello Bristol Sales Expert (${email})</p>
+    <p>Hello Bristol Sales Expert</p>
     <p>Here is a <b>NEW</b> inquiry interested in renting a B2B vehicle with Bristol. Details in form content listed below.</p>
     <p><i>Note: They may or may not have pre-selected a vehicle of choice, this is an optional field for the customer.</i></p>
     <p>Please CONTACT this customer to arrange their booking with Bristol.</p>
@@ -58,6 +62,7 @@ const buildEmailContent = (body: any, email: string) => {
     </table>
 
     <p>Good luck with this booking!</p>
+    <p>Actual email goes to - ${email}, cc - ${cc}</p>
   `;
 };
 
@@ -73,9 +78,15 @@ export async function POST(req: NextRequest) {
       bristolLocations.find((loc) => loc.fallback) ||
       bristolLocations[0];
 
-    const htmlContent = buildEmailContent(body, locationData.email);
+    const htmlContent = buildEmailContent(
+      body,
+      locationData.email,
+      locationData.cc
+    );
     const message = {
       to: ["karanm@skylarmedia.ca", "agim@skylarmedia.ca"],
+      //   cc: locationData.cc.split(","),
+      cc: "kajals@skylarmedia.ca",
       from: {
         email: "websupport@skylarmedia.ca",
         name: "Bristol Truck Rentals",
