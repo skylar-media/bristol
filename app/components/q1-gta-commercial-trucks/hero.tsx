@@ -26,7 +26,7 @@ const Hero = ({
         <h1 className="text-2xl md:text-3xl xl:text-5xl text-balance">
           Commercial Van and Truck Rentals in {currentLocation.label}
         </h1>
-        <p className=" md:max-w-[60%] w-full">
+        <p className=" md:max-w-[60%] w-full text-balance xl:text-nowrap">
           When you book with Bristol, your reservation is guaranteed.
         </p>
         <div className="items-center gap-4 xl:mt-6 mb-1 hidden md:flex">

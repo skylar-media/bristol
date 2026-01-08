@@ -10,7 +10,7 @@ const Header = ({
   currentLocation: BristolLocationType;
 }) => {
   return (
-    <div className="bg-white sticky top-0 z-50">
+    <div className="bg-white sticky top-0 z-50 shadow">
       <div className="w-full max-w-[90%] mx-auto">
         <header className="flex items-center justify-between w-full py-6">
           <Image
