@@ -19,7 +19,7 @@ const Header = ({
             width={100}
             height={100}
             unoptimized
-            className="w-40 h-full object-cover"
+            className="w-35 md:w-40 h-full object-cover"
             id="logo-bristol-lp-header"
           />
           <div className="flex items-center gap-10">
@@ -35,11 +35,13 @@ const Header = ({
               <Phone />
               <span>{currentLocation.displayPhone}</span>
             </Link>
-            <CanadaFlag />
+            <CanadaFlag className="-ml-4 md:inline hidden" />
           </div>
         </header>
         <p className="font-bold mb-5 text-center text-main text-base tracking-wide lg:hidden block">
-          BOOK NOW TO SAVE $50* — LIMITED TIME OFFER
+          BOOK NOW TO SAVE $50* —
+          <br />
+          LIMITED TIME OFFER
         </p>
       </div>
     </div>

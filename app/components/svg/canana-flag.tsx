@@ -1,4 +1,4 @@
-const CanadaFlag = () => {
+const CanadaFlag = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,7 +6,7 @@ const CanadaFlag = () => {
       height="22"
       viewBox="0 0 40 22"
       fill="none"
-      className="-ml-4"
+      className={className}
     >
       <g clipPath="url(#clip0_169_316)">
         <path d="M30.9838 0H9.0166V22H30.9838V0Z" fill="#F7F7F7" />
