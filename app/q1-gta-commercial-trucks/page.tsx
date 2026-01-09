@@ -77,7 +77,7 @@ const page = async ({
             formId="contact-form"
             location={locationData.name}
           />
-          <p className="font-bold text-center mt-4 max-w-3xl">
+          <p className="text-center mt-4 max-w-3xl">
             *Offer applies to a single vehicle rental booked by March, 31 2026.
             $50 discount applies to qualifying bookings as specified in the
             promotion details. Eligible vehicles include Cargo Vans, 16&apos;
