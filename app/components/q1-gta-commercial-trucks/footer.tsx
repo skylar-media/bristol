@@ -48,6 +48,10 @@ const Footer = () => {
           </nav>
         </div>
       </div>
+      <div className="p-5 text-center border-t-[#DAE1E7] border-t text-base">
+        &copy; {new Date().getFullYear()} Bristol Car & Truck Rentals. All
+        rights reserved.
+      </div>
     </footer>
   );
 };

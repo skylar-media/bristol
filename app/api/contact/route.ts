@@ -8,34 +8,31 @@ export const bristolLocations = [
     label: "Mississauga Car and Truck Rental",
     value: "mississauga",
     email: "alexp@bristoltruckrentals.com",
-    cc: "pshilotri@bristoltruckrentals.com",
+    cc: ["pshilotri@bristoltruckrentals.com"],
   },
   {
     label: "Milton Car and Truck Rental",
     value: "milton",
     email: "valimena@bristoltruckrentals.com",
-    cc: "tsabri@bristoltruckrentals.com",
+    cc: ["tsabri@bristoltruckrentals.com"],
   },
   {
     label: "Brampton Truck Rental (Rutherford Road)",
     value: "brampton",
     email: "tgonzaga@bristoltruckrentals.com",
-    cc: "vshory@bristoltruckrentals.com",
+    cc: ["vshory@bristoltruckrentals.com"],
     fallback: true, // ✅ default GTA / Brampton
   },
   {
     label: "Brampton Car and Truck Rental (Bramalea)",
     value: "brampton bramaliea",
     email: "dlobo@bristoltruckrentals.com",
-    cc: "jhussain@bristoltruckrentals.com,mmoras@bristoltruckrentals.com",
+    cc: ["jhussain@bristoltruckrentals.com", "mmoras@bristoltruckrentals.com"],
   },
 ];
 
-const normalizeEmails = (emails?: string) =>
-  emails ? emails.split(",").map((e) => e.trim()) : [];
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const buildEmailContent = (body: any, email: string, cc: string) => {
+const buildEmailContent = (body: any, label: string) => {
   return `
     <p>Hello Bristol Sales Expert</p>
     <p>Here is a <b>NEW</b> inquiry interested in renting a B2B vehicle with Bristol. Details in form content listed below.</p>
@@ -60,14 +57,19 @@ const buildEmailContent = (body: any, email: string, cc: string) => {
       </tr>
       <tr>
         <td><strong>Location:</strong></td>
-        <td>${body.location || "N/A"}</td>
+        <td>${label || "N/A"}</td>
       </tr>
     </table>
 
     <p>Good luck with this booking!</p>
-    <p>Actual email goes to - ${email}, cc - ${cc}</p>
   `;
 };
+
+const globalCc = [
+  "karanm@skylarmedia.ca",
+  "agimd@skylarmedia.ca",
+  "hollyb@skylarmedia.ca",
+];
 
 export async function POST(req: NextRequest) {
   try {
@@ -80,15 +82,14 @@ export async function POST(req: NextRequest) {
       ) ||
       bristolLocations.find((loc) => loc.fallback) ||
       bristolLocations[0];
-
+    const ccList = Array.from(new Set([...globalCc, ...locationData.cc]));
     const htmlContent = buildEmailContent(
       body,
-      locationData.email,
-      locationData.cc
+      body.location === "gta" ? "Other/GTA" : locationData.label
     );
     const message = {
-      to: ["karanm@skylarmedia.ca", "agim@skylarmedia.ca"],
-      cc: ["kajals@skylarmedia.ca"],
+      to: locationData.email,
+      cc: ccList,
       from: {
         email: "websupport@skylarmedia.ca",
         name: "Bristol Truck Rentals",

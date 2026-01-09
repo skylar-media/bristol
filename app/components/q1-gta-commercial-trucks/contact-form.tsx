@@ -2,6 +2,7 @@
 
 import { FormField, formFields } from "@/lib/data/contactForm";
 import { Check } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 type FormData = {
@@ -21,7 +22,6 @@ const QuoteForm = ({
   formId: string;
   location: string;
 }) => {
-  console.log(location);
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -29,7 +29,7 @@ const QuoteForm = ({
     vehicle: "",
     location: location.toLowerCase(),
   });
-
+  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
@@ -63,6 +63,7 @@ const QuoteForm = ({
         vehicle: "",
         location: "gta",
       });
+      router.push("/thank-you");
     } catch (error) {
       console.error(error);
     } finally {

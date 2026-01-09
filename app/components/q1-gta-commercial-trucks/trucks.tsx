@@ -53,9 +53,9 @@ const Trucks = () => {
                     <Image
                       src={vehicle.image}
                       alt={vehicle.title}
-                      width={500}
-                      height={300}
-                      className="mb-6 h-44 w-full object-contain"
+                      width={2500}
+                      height={200}
+                      className="mb-6 h-44 w-full object-cover"
                     />
 
                     <h3 className="mb-2 text-lg md:text-xl font-bold uppercase tracking-wide text-main">

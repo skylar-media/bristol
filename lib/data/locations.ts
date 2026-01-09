@@ -34,7 +34,7 @@ export const bristolLocations = [
   {
     id: "brampton-rutherford",
     name: "GTA",
-    displayPhone: "(647) 584-9852",
+    displayPhone: "(647) 692-6388",
     ringsToPhone: "(905) 453-8080",
     ringsToPhoneTel: "tel:9054538080",
     email: "tgonzaga@bristoltruckrentals.com",
