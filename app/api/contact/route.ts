@@ -74,6 +74,10 @@ export async function POST(req: NextRequest) {
         { status: 403 }
       );
     }
+    return new Response(
+    JSON.stringify({ message: "Temporarily disabled" }),
+    { status: 503 }
+  );
     const locationData =
       bristolLocations.find(
         (loc) =>
