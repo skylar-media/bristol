@@ -27,7 +27,7 @@ export const bristolLocations = [
     label: "Brampton Car and Truck Rental (Bramalea)",
     value: "brampton bramaliea",
     email: "dlobo@bristoltruckrentals.com",
-    cc: ["jhussain@bristoltruckrentals.com", "mmoras@bristoltruckrentals.com"],
+    cc: ["jhussain@bristoltruckrentals.com", "gsingh@bristoltruckrentals.com"],
   },
 ];
 
