@@ -1,0 +1,15 @@
+export const industries = [
+  "HVAC contractors",
+  "Disaster Restoration",
+  "Landscaping & Snow Services",
+  "Electrical Contractors",
+  "General Contractors",
+  "Window & Door Installers",
+  "Plumbing Contractors",
+  "Furniture Retailers",
+  "Millwork/Cabinetry Installers",
+  "Event Production",
+  "Film/TV production",
+  "Appliance Distributors",
+  "Railing Companies",
+];
