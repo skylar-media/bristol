@@ -23,7 +23,7 @@ export const vehicleCards = [
       "The tradesman's workshop. Ideal for cabinetry, HVAC installs, and tools.",
     features: [
       "Payload: Up to 2,112 lbs",
-      "Access: Pull-out ramp for easy loadin",
+      "Access: Pull-out ramp for easy loading",
       "Licence: G Class",
     ],
     ctaText: "Get Quote",

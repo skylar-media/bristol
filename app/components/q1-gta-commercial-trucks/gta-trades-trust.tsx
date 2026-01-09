@@ -40,6 +40,13 @@ export default function GtaTradesTrust() {
                 </span>
                 <span className="">Pre-cleaned, ready-to-go vehicles</span>
               </li>
+
+              <li className="flex items-start justify-center md:justify-start gap-3">
+                <span className="flex h-6 w-6 items-center justify-center rounded bg-main text-white">
+                  <Check className="h-4 w-4" />
+                </span>
+                <span className="">Bristol in business since 1992</span>
+              </li>
             </ul>
           </div>
 
