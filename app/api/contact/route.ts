@@ -65,12 +65,6 @@ const buildEmailContent = (body: any, label: string) => {
   `;
 };
 
-const globalCc = [
-  "karanm@skylarmedia.ca",
-  "agimd@skylarmedia.ca",
-  "hollyb@skylarmedia.ca",
-];
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -88,7 +82,7 @@ export async function POST(req: NextRequest) {
       ) ||
       bristolLocations.find((loc) => loc.fallback) ||
       bristolLocations[0];
-    const ccList = Array.from(new Set([...globalCc, ...locationData.cc]));
+    const ccList = Array.from(new Set([...locationData.cc]));
     const htmlContent = buildEmailContent(
       body,
       body.location === "gta" ? "Other/GTA" : locationData.label
