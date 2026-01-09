@@ -1,4 +1,5 @@
 import mail from "@sendgrid/mail";
+import { checkBotId } from "botid/server";
 import { NextRequest, NextResponse } from "next/server";
 
 mail.setApiKey(process.env.SENDGRID_API_KEY as string);
@@ -65,15 +66,21 @@ const buildEmailContent = (body: any, label: string) => {
   `;
 };
 
-export async function POST(req: NextRequest) {
+export async function POST(request: NextRequest) {
+  const verification = await checkBotId();
+
+  if (verification.isBot) {
+    return NextResponse.json({ error: "Access denied" }, { status: 403 });
+  }
+
+  const data = await processUserRequest(request);
+
+  return NextResponse.json({ data });
+}
+
+export async function processUserRequest(req: NextRequest) {
   try {
     const body = await req.json();
-    if (body.company_website) {
-      return NextResponse.json(
-        { status: "Error", error: "Bot detected" },
-        { status: 403 }
-      );
-    }
     const locationData =
       bristolLocations.find(
         (loc) =>
