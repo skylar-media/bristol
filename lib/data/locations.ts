@@ -49,7 +49,7 @@ export const bristolLocations = [
   {
     id: "brampton",
     name: "Brampton",
-    displayPhone: "(647) 362-1965",
+    displayPhone: "(647) 584-9852",
     ringsToPhone: "(905) 790-8086",
     ringsToPhoneTel: "tel:9057908086",
     ringsToPhoneTelRail: "tel:6475849852",
