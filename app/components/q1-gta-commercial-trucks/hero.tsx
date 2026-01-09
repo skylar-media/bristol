@@ -50,8 +50,8 @@ const Hero = ({
             Call Now
           </Link>
         </div>
-        <span className="text-yellow font-bold lg:-mt-3">
-          Use Promo Code: SAVE50
+        <span className="text-yellow font-normal lg:-mt-3">
+          Use Promo Code: <span className="font-bold">SAVE50</span>
         </span>
         <p className="text-balance hidden xl:block">
           Canadian Owned • Pre-Cleaned Vehicles • Fast Pick-Up
