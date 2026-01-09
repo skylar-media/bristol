@@ -62,6 +62,8 @@ export const formFields: FormField[] = [
       { label: "16' Cube Truck", value: "16' Cube Truck" },
       { label: "24'-26' Straight Trucks", value: "24'-26' Straight Trucks" },
       { label: "20' Straight Trucks", value: "20' Straight Trucks" },
+      { label: "Refrigerated Trucks", value: "Refrigerated Trucks" },
+      { label: "Flatbed Truck", value: "Flatbed Truck" },
     ],
     id: "vehicle",
   },
