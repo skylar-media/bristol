@@ -43,7 +43,7 @@ const Hero = ({
             Get Quote & Save $50
           </Link>
           <Link
-            href={currentLocation.ringsToPhoneTel}
+            href={currentLocation.ringsToPhoneTelRail}
             id="btn-bristol-lp-hero-call"
             className="bg-yellow text-black px-5 py-2 rounded-xl"
           >
