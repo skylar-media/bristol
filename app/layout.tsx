@@ -1,5 +1,4 @@
 import { GoogleTagManager } from "@next/third-parties/google";
-import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 
@@ -9,9 +8,37 @@ const figtree = Figtree({
   variable: "--font-figtree",
 });
 
-export const metadata: Metadata = {
-  title: "Bristol Truck Rentals",
-  description: "Q1 GTA Commercial Trucks",
+export const metadata = {
+  title: {
+    default: "Commercial Truck Rental GTA | Get $50 Off | Bristol Rentals",
+  },
+  description:
+    "Guaranteed commercial truck rentals in Brampton, Mississauga & Milton. Rent Cargo Vans, 16' Cubes & 5-Tons. Book now and save $50 on your first rental.",
+  openGraph: {
+    type: "website",
+    locale: "en_CA",
+    siteName: "Bristol",
+    url: "https://lp.bristoltruckrentals.com/q1-gta-commercial-trucks",
+    images: [
+      {
+        url: "/bristol-logo.png",
+        width: 1640,
+        height: 624,
+        alt: "Bristol Logo",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      maxSnippet: -1,
+      maxImagePreview: "large",
+      maxVideoPreview: -1,
+    },
+  },
 };
 
 export default function RootLayout({

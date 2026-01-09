@@ -22,8 +22,8 @@ export const vehicleCards = [
     description:
       "The tradesman's workshop. Ideal for cabinetry, HVAC installs, and tools.",
     features: [
-      "Feature: Pull-out Ramp",
-      "Capacity: 2-3 Room Equivalent",
+      "Payload: Up to 2,112 lbs",
+      "Access: Pull-out ramp for easy loadin",
       "Licence: G Class",
     ],
     ctaText: "Get Quote",
@@ -49,11 +49,10 @@ export const vehicleCards = [
     title: "20' Straight Trucks",
     order: 4,
     image: "/trucks/20truck.png",
-    description:
-      "Heavy-duty logistics. Hydraulic liftgate for pallets, skids, and equipment.",
+    description: "Temperature-control options and easy loading and access.",
     features: [
-      "Feature: Hydraulic Liftgate",
-      "Capacity: 8-10 Pallets",
+      "Payload: Up to 5,786 lbs",
+      "Access: Large roll-up rear door",
       "Licence: G Class",
     ],
     ctaText: "Get Quote",

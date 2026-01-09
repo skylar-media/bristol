@@ -1,6 +1,37 @@
 import Link from "next/link";
 import ThankYouHeader from "../components/q1-gta-commercial-trucks/thank-you-header";
 
+export const metadata = {
+  title: "Request Received | $50 Discount Secured",
+  description:
+    "Thank you. Your commercial truck quote request has been received and your $50 discount is locked in. A Bristol specialist will call you shortly.",
+  openGraph: {
+    type: "website",
+    locale: "en_CA",
+    siteName: "Bristol",
+    url: "https://lp.bristoltruckrentals.com/q1-gta-commercial-trucks",
+    images: [
+      {
+        url: "/bristol-logo.png",
+        width: 1640,
+        height: 624,
+        alt: "Bristol Logo",
+      },
+    ],
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      maxSnippet: -1,
+      maxImagePreview: "large",
+      maxVideoPreview: -1,
+    },
+  },
+};
+
 const page = () => {
   return (
     <div className="flex flex-col min-h-screen">
