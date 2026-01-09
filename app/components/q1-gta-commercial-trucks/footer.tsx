@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import Modal from "../modal";
+import PrivacyContent from "../privacy-content";
+import TermsContent from "../terms-content";
 
 const Footer = () => {
   return (
@@ -24,20 +27,34 @@ const Footer = () => {
 
           {/* Links */}
           <nav className="flex items-center md:flex-nowrap flex-wrap gap-3 md:gap-6 text-base font-semibold text-main md:flex-row">
-            <Link
-              href="/"
-              id="lnk-bristol-lp-footer-privacy"
-              className="hover:underline"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="/"
-              id="lnk-bristol-lp-footer-terms"
-              className="hover:underline"
-            >
-              Terms of Service
-            </Link>
+            <Modal
+              trigger_text={
+                <button
+                  className="hover:underline"
+                  id="lnk-bristol-lp-footer-privacy"
+                >
+                  Privacy Policy
+                </button>
+              }
+              size="xl"
+              id="lnk-bristol-lp-footer-privacy-modal"
+              title="Bristol Rentals Ltd. - Privacy Policy"
+              body={<PrivacyContent />}
+            />
+            <Modal
+              trigger_text={
+                <button
+                  className="hover:underline"
+                  id="lnk-bristol-lp-footer-terms"
+                >
+                  Terms of Service
+                </button>
+              }
+              size="xl"
+              id="lnk-bristol-lp-footer-terms-modal"
+              title="TERMS AND CONDITIONS OF RENTAL AGREEMENT"
+              body={<TermsContent />}
+            />
             <Link
               href="#contact-us"
               id="lnk-bristol-lp-footer-contact"
