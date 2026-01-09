@@ -48,7 +48,7 @@ export const vehicleCards = [
     id: "20-straight-truck",
     title: "20' Straight Trucks",
     order: 4,
-    image: "/trucks/24straighttruck.png",
+    image: "/trucks/20truck.png",
     description:
       "Heavy-duty logistics. Hydraulic liftgate for pallets, skids, and equipment.",
     features: [

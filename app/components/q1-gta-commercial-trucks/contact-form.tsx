@@ -136,6 +136,15 @@ const QuoteForm = ({
             )}
           </div>
         ))}
+        <input
+          name="website"
+          id="company_website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          placeholder="Keep it empty"
+          className="my-12 box-border hidden w-full border border-[#707070] bg-[#f8f8f8] p-3 text-xl md:text-2xl lg:p-6"
+        />
       </div>
       {/* Footer */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">

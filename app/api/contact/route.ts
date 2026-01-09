@@ -34,10 +34,10 @@ export const bristolLocations = [
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const buildEmailContent = (body: any, label: string) => {
   return `
-    <p>Hello Bristol Sales Expert</p>
+    <p>Hello Bristol Sales Expert,</p>
     <p>Here is a <b>NEW</b> inquiry interested in renting a B2B vehicle with Bristol. Details in form content listed below.</p>
     <p><i>Note: They may or may not have pre-selected a vehicle of choice, this is an optional field for the customer.</i></p>
-    <p>Please CONTACT this customer to arrange their booking with Bristol.</p>
+    <p>Please <b>CONTACT</b> this customer to arrange their booking with Bristol.</p>
     <table cellpadding="6" cellspacing="0" style="border-collapse: collapse;">
       <tr>
         <td><strong>Name:</strong></td>
@@ -74,6 +74,12 @@ const globalCc = [
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+    if (body.company_website) {
+      return NextResponse.json(
+        { status: "Error", error: "Bot detected" },
+        { status: 403 }
+      );
+    }
     const locationData =
       bristolLocations.find(
         (loc) =>
