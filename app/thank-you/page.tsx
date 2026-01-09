@@ -19,6 +19,13 @@ export const metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Request Received | $50 Discount Secured",
+    description:
+      "Thank you. Your commercial truck quote request has been received and your $50 discount is locked in. A Bristol specialist will call you shortly.",
+    images: ["/bristol-logo.png"],
+  },
   robots: {
     index: false,
     follow: false,

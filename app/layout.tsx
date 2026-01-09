@@ -14,10 +14,8 @@ export const metadata = {
   title: {
     default: "Commercial Truck Rental GTA | Get $50 Off | Bristol Rentals",
   },
-
   description:
     "Guaranteed commercial truck rentals in Brampton, Mississauga & Milton. Rent Cargo Vans, 16' Cubes & 5-Tons. Book now and save $50 on your first rental.",
-
   openGraph: {
     type: "website",
     locale: "en_CA",
@@ -32,7 +30,13 @@ export const metadata = {
       },
     ],
   },
-
+  twitter: {
+    card: "summary_large_image",
+    title: "Commercial Truck Rental GTA | Get $50 Off | Bristol Rentals",
+    description:
+      "Guaranteed commercial truck rentals in Brampton, Mississauga & Milton.",
+    images: ["/bristol-logo.png"],
+  },
   robots: {
     index: true,
     follow: true,
