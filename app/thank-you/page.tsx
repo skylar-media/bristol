@@ -81,6 +81,9 @@ const page = () => {
               <li className="flex justify-between mb-2">
                 <strong>Sunday:</strong> 9:00 AM - 3:00 PM
               </li>
+              <li className="text-right flex justify-end text-xs -mt-2 mb-3">
+                (Brampton Truck/Milton open)
+              </li>
             </ul>
             <div className="text-center text-xs">*Hours vary by location.</div>
           </div>
