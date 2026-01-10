@@ -95,8 +95,8 @@ export async function processUserRequest(req: NextRequest) {
       body.location === "gta" ? "Other/GTA" : locationData.label
     );
     const message = {
-      to: locationData.email,
-      cc: ccList,
+      to: "karanm@skylarmedia.ca",
+      // cc: ccList,
       from: {
         email: "websupport@skylarmedia.ca",
         name: "Bristol Truck Rentals",
