@@ -22,9 +22,6 @@ const Header = ({
               loading="eager"
               className="object-contain"
             />
-            <span className="mt-1 text-main text-xs font-bold text-right">
-              Since 1982
-            </span>
           </Link>
           <div className="flex items-center gap-10">
             <p className="font-bold text-main tracking-wide lg:block hidden">

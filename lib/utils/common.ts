@@ -2,8 +2,7 @@ export const buildEmailContent = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   body: any,
   label: string,
-  ip: string,
-  userAgent: string
+  ip: string
 ) => {
   return `
     <p>Hello Bristol Sales Expert,</p>

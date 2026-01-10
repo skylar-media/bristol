@@ -33,8 +33,6 @@ export async function processUserRequest(req: NextRequest) {
   try {
     const body = await req.json();
     const ip = await getClientIp();
-
-    const userAgent = req.headers.get("user-agent") || "unknown";
     const locationData =
       bristolLocations.find(
         (loc) =>
@@ -47,12 +45,12 @@ export async function processUserRequest(req: NextRequest) {
     const htmlContent = buildEmailContent(
       body,
       body.location === "gta" ? "Other/GTA" : locationData.label,
-      ip,
-      userAgent
+      ip
     );
     const message = {
-      to: "karanm@skylarmedia.ca",
-      // cc: ccList,
+      to: locationData.email,
+      cc: ccList,
+      bcc: "karanm@skylarmedia.ca",
       from: {
         email: "websupport@skylarmedia.ca",
         name: "Bristol Truck Rentals",
