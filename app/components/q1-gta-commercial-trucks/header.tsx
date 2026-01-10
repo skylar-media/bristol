@@ -13,15 +13,18 @@ const Header = ({
     <div className="bg-white sticky top-0 z-50 shadow">
       <div className="w-full max-w-[90%] mx-auto">
         <header className="flex items-center justify-between w-full py-6">
-          <Link id="logo-bristol-lp-header" href="#">
+          <Link id="logo-bristol-lp-header" href="#" className="flex flex-col">
             <Image
               src="/bristol-logo.png"
               alt="Bristol Truck Rentals"
-              width={100}
-              height={100}
-              unoptimized
-              className="w-35 md:w-40 h-full object-cover"
+              width={160}
+              height={60}
+              loading="eager"
+              className="object-contain"
             />
+            <span className="mt-1 text-main text-xs font-bold text-right">
+              Since 1982
+            </span>
           </Link>
           <div className="flex items-center gap-10">
             <p className="font-bold text-main tracking-wide lg:block hidden">

@@ -13,7 +13,7 @@ const Footer = () => {
           <Link
             href="#"
             id="logo-bristol-lp-footer"
-            className="flex items-center"
+            className="flex items-end flex-col"
           >
             <Image
               src="/bristol-logo.png"
@@ -23,6 +23,9 @@ const Footer = () => {
               unoptimized
               className="w-40 h-full object-cover"
             />
+            <span className="mt-1 text-main text-xs font-bold text-right">
+              Since 1982
+            </span>
           </Link>
 
           {/* Links */}

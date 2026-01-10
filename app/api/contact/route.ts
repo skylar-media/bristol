@@ -68,9 +68,11 @@ const buildEmailContent = (body: any, label: string) => {
 
 export async function POST(request: NextRequest) {
   const verification = await checkBotId();
-
   if (verification.isBot) {
-    return NextResponse.json({ error: "Access denied" }, { status: 403 });
+    return NextResponse.json(
+      { error: "Bot traffic detected" },
+      { status: 403 }
+    );
   }
 
   const data = await processUserRequest(request);
