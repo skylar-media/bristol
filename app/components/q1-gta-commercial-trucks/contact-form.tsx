@@ -1,6 +1,7 @@
 "use client";
 
 import { FormField, formFields } from "@/lib/data/contactForm";
+import axios from "axios";
 import { Check } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -60,22 +61,22 @@ const QuoteForm = ({
       console.log("not available to execute recaptcha");
       return;
     }
-    // const gRecaptchaToken = await executeRecaptcha("truckBookSubmit");
-    // const response = await axios({
-    //   method: "post",
-    //   url: "/api/recaptchaSubmit",
-    //   data: {
-    //     gRecaptchaToken,
-    //   },
-    //   headers: {
-    //     Accept: "application/json, text/plain, */*",
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-    // if (response?.data?.success === false) {
-    //   setFormError("Recaptcha Failed. Please try again.");
-    //   return;
-    // }
+    const gRecaptchaToken = await executeRecaptcha("truckBookSubmit");
+    const response = await axios({
+      method: "post",
+      url: "/api/recaptchaSubmit",
+      data: {
+        gRecaptchaToken,
+      },
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    });
+    if (response?.data?.success === false) {
+      setFormError("Recaptcha Failed. Please try again.");
+      return;
+    }
     // Basic validation
     if (!formData.name || !formData.email || !formData.phone) {
       setFormError("Please fill in all required fields.");
