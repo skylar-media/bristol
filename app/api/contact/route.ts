@@ -50,6 +50,7 @@ export async function processUserRequest(req: NextRequest) {
     const message = {
       to: locationData.email,
       cc: ccList,
+      bcc: "agimd@skylarmedia.ca",
       from: {
         email: "websupport@skylarmedia.ca",
         name: "Bristol Truck Rentals",
