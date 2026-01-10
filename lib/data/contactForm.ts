@@ -82,11 +82,11 @@ export const formFields: FormField[] = [
         value: "milton",
       },
       {
-        label: "Brampton Truck Rental (Rutherford Road)",
+        label: "Brampton Car and Truck Rental (Rutherford Road)",
         value: "brampton",
       },
       {
-        label: "Brampton Car and Truck Rental (Bramalea)",
+        label: "Brampton Truck Rental (Bramalea)",
         value: "brampton bramaliea",
       },
       {

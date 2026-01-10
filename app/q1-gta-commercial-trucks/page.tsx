@@ -81,9 +81,9 @@ const page = async ({
             *Offer applies to a single vehicle rental booked by March, 31 2026.
             $50 discount applies to qualifying bookings as specified in the
             promotion details. Eligible vehicles include Cargo Vans, 16&apos;
-            Cube Trucks, and 20&apos;-26&apos; / 5-Ton trucks. Bristol car and
-            truck rental locations include Brampton, Mississauga and Milton
-            exclusively.
+            Cube Trucks, 20&apos;-26&apos; / 5-Ton trucks, Refrigerated Trucks,
+            and Flatbed Trucks. Bristol car and truck rental locations include
+            Brampton, Mississauga and Milton exclusively.
           </p>
         </section>
       </div>
