@@ -9,7 +9,7 @@ export type Location = {
 
 export const locations: Location[] = [
   {
-    title: "Brampton Car and Truck Rental",
+    title: "Brampton Truck Rental",
     addressLine1: "216 Rutherford Road South",
     addressLine2: "Brampton, ON, L6W 3J6",
     phone: "(647) 584-9852",
@@ -17,9 +17,8 @@ export const locations: Location[] = [
     id: "btn-bristol-lp-branch-brampton-tracy-call",
   },
   {
-    title: "Brampton Truck Rental (Bramalea)",
+    title: "Brampton Car and Truck Rental (Bramalea)",
     addressLine1: "6 Tracey Blvd.",
-
     addressLine2: "Brampton, ON, L6T 5R9",
     phone: "(647) 362-1965",
     phoneHref: "6473621965",

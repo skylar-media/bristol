@@ -45,7 +45,7 @@ export default function GtaTradesTrust() {
                 <span className="flex h-6 w-6 items-center justify-center rounded bg-main text-white">
                   <Check className="h-4 w-4" />
                 </span>
-                <span className="">Bristol in business since 1992</span>
+                <span className="">In business since 1992</span>
               </li>
             </ul>
           </div>
