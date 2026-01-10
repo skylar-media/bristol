@@ -54,14 +54,14 @@ export const bristolLocations = [
     cc: ["tsabri@bristoltruckrentals.com"],
   },
   {
-    label: "Brampton Truck Rental (Rutherford Road)",
+    label: "Brampton Car and Truck Rental (Rutherford Road)",
     value: "brampton",
     email: "tgonzaga@bristoltruckrentals.com",
     cc: ["vshory@bristoltruckrentals.com"],
     fallback: true, // ✅ default GTA / Brampton
   },
   {
-    label: "Brampton Car and Truck Rental (Bramalea)",
+    label: "Brampton Truck Rental (Bramalea)",
     value: "brampton bramaliea",
     email: "dlobo@bristoltruckrentals.com",
     cc: ["jhussain@bristoltruckrentals.com", "gsingh@bristoltruckrentals.com"],
