@@ -1,5 +1,6 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Figtree } from "next/font/google";
+import GoogleCaptchaWrapper from "./components/google-recaptcha-wrapper";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -61,7 +62,9 @@ export default function RootLayout({
       <body
         className={`${figtree.variable} flex min-h-screen flex-col antialiased`}
       >
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <GoogleCaptchaWrapper>{children}</GoogleCaptchaWrapper>
+        </main>
       </body>
     </html>
   );

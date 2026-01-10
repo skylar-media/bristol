@@ -1,9 +1,11 @@
 "use client";
 
 import { FormField, formFields } from "@/lib/data/contactForm";
+import axios from "axios";
 import { Check } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 type FormData = {
   name: string;
@@ -40,6 +42,7 @@ const QuoteForm = ({
     vehicle: "",
     location: location.toLowerCase(),
   });
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formError, setFormError] = useState<string | null>(null);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -54,7 +57,26 @@ const QuoteForm = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    if (!executeRecaptcha) {
+      console.log("not available to execute recaptcha");
+      return;
+    }
+    const gRecaptchaToken = await executeRecaptcha("truckBookSubmit");
+    const response = await axios({
+      method: "post",
+      url: "/api/recaptchaSubmit",
+      data: {
+        gRecaptchaToken,
+      },
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    });
+    if (response?.data?.success === false) {
+      setFormError("Recaptcha Failed. Please try again.");
+      return;
+    }
     // Basic validation
     if (!formData.name || !formData.email || !formData.phone) {
       setFormError("Please fill in all required fields.");
@@ -74,11 +96,21 @@ const QuoteForm = ({
     setLoading(true);
 
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
+      if (!res.ok) {
+        const error = await res.json().catch(() => ({}));
+
+        setFormError(error?.error || "Submission failed. Please try again.");
+
+        setLoading(false);
+        return;
+      }
+
       setFormData({
         name: "",
         email: "",
@@ -86,6 +118,7 @@ const QuoteForm = ({
         vehicle: "",
         location: "gta",
       });
+
       router.push("/thank-you");
     } catch (error) {
       console.error(error);

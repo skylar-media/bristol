@@ -12,13 +12,15 @@
     "@next/third-parties": "^16.1.1",
     "@sendgrid/mail": "^8.1.6",
     "animate.css": "^4.1.1",
+    "axios": "^1.13.2",
     "botid": "^1.5.10",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-google-recaptcha-v3": "^1.11.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

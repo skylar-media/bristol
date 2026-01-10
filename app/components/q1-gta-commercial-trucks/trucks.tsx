@@ -55,7 +55,7 @@ const Trucks = () => {
                       alt={vehicle.title}
                       width={2500}
                       height={200}
-                      className="mb-6 h-35 md:h-44 w-full object-cover"
+                      className="mb-6 md:h-55 w-full object-contain"
                     />
 
                     <h3 className="mb-2 text-lg md:text-xl font-bold uppercase tracking-wide text-main">
