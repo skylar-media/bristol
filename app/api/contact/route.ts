@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
   if (verification.isBot) {
     return NextResponse.json(
       { error: "Bot traffic detected" },
-      { status: 403 }
+      { status: 403 },
     );
   }
 
@@ -37,7 +37,7 @@ export async function processUserRequest(req: NextRequest) {
       bristolLocations.find(
         (loc) =>
           loc.label.toLowerCase() === body.location?.toLowerCase() ||
-          loc.value === body.location?.toLowerCase()
+          loc.value === body.location?.toLowerCase(),
       ) ||
       bristolLocations.find((loc) => loc.fallback) ||
       bristolLocations[0];
@@ -45,7 +45,7 @@ export async function processUserRequest(req: NextRequest) {
     const htmlContent = buildEmailContent(
       body,
       body.location === "gta" ? "Other/GTA" : locationData.label,
-      ip
+      ip,
     );
     const message = {
       to: locationData.email,
@@ -67,7 +67,7 @@ export async function processUserRequest(req: NextRequest) {
     console.error("SendGrid error:", error);
     return NextResponse.json(
       { status: "Error", message: "Internal server error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
