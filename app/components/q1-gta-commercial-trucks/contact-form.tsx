@@ -48,7 +48,7 @@ const QuoteForm = ({
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
     setFormError(null); // clear error when user edits
@@ -57,6 +57,8 @@ const QuoteForm = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading) return;
+    setLoading(true);
     if (!executeRecaptcha) {
       console.log("not available to execute recaptcha");
       return;
@@ -80,20 +82,21 @@ const QuoteForm = ({
     // Basic validation
     if (!formData.name || !formData.email || !formData.phone) {
       setFormError("Please fill in all required fields.");
+      setLoading(false);
       return;
     }
 
     if (!isValidEmail(formData.email)) {
       setFormError("Please enter a valid email address.");
+      setLoading(false);
       return;
     }
 
     if (!isValidPhone(formData.phone)) {
       setFormError("Please enter a valid 10-digit phone number.");
+      setLoading(false);
       return;
     }
-
-    setLoading(true);
 
     try {
       const res = await fetch("/api/contact", {
