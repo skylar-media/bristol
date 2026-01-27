@@ -1,6 +1,7 @@
 import { BristolLocationType } from "@/lib/data/locations";
 import Image from "next/image";
 import Link from "next/link";
+import ScrollToContactButton from "./scroll-to-contact-button";
 
 const Hero = ({
   currentLocation,
@@ -35,13 +36,7 @@ const Hero = ({
           When you book with Bristol, your reservation is guaranteed.
         </p>
         <div className="items-center gap-4 xl:mt-6 mb-1 hidden md:flex">
-          <Link
-            href="#contact-us"
-            id="btn-bristol-lp-hero-get-quote"
-            className="bg-red px-5 py-2 rounded-xl"
-          >
-            Get Quote & Save $50
-          </Link>
+          <ScrollToContactButton id="btn-bristol-lp-hero-get-quote" />
           <Link
             href={currentLocation.ringsToPhoneTelRail}
             id="btn-bristol-lp-hero-call"

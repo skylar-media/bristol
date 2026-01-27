@@ -6,6 +6,7 @@ import Footer from "../components/q1-gta-commercial-trucks/footer";
 import GtaTradesTrust from "../components/q1-gta-commercial-trucks/gta-trades-trust";
 import Header from "../components/q1-gta-commercial-trucks/header";
 import Hero from "../components/q1-gta-commercial-trucks/hero";
+import ScrollToContactButton from "../components/q1-gta-commercial-trucks/scroll-to-contact-button";
 import Testimonials from "../components/q1-gta-commercial-trucks/testimonials";
 import TruckRentalLead from "../components/q1-gta-commercial-trucks/truck-rental-lead";
 import Trucks from "../components/q1-gta-commercial-trucks/trucks";
@@ -21,7 +22,7 @@ const page = async ({
 
   const locationData =
     bristolLocations.find(
-      (location) => location.label.toLowerCase() === currentLocation
+      (location) => location.label.toLowerCase() === currentLocation,
     ) ||
     bristolLocations.find((location) => location.fallback) ||
     bristolLocations[0];
@@ -30,10 +31,8 @@ const page = async ({
       <Header currentLocation={locationData} />
       <div className="flex-1">
         <Hero currentLocation={locationData} />
-        <div className="items-center justify-center mt-4 gap-4 xl:mt-6 mb-1 md:hidden flex text-white font-bold">
-          <Link href="#contact-us" className="bg-red px-5 py-2 rounded-xl">
-            Get Quote & Save $50
-          </Link>
+        <div className="fixed bottom-0 left-0 z-50 flex w-full items-center justify-center shadow gap-4 bg-white/90 px-4 py-3 text-white font-bold md:hidden">
+          <ScrollToContactButton />
           <Link
             href="tel:9058238499"
             className="bg-yellow text-black px-5 py-2 rounded-xl"
